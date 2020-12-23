@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.7.0 on win32)" generated="20201223 16:04:40.249" rpa="false">
+<suite id="s1" name="MyDemo" source="C:\Users\jaipa\eclipse-workspace\MyDemo">
+<suite id="s1-s1" name="My First" source="C:\Users\jaipa\eclipse-workspace\MyDemo\my_first.robot">
+<kw name="Open Browser" library="SeleniumLibrary" type="setup">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>https://www.google.co.in/</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20201223 16:04:40.528" level="INFO">Opening browser 'chrome' to base url 'https://www.google.co.in/'.</msg>
+<status status="PASS" starttime="20201223 16:04:40.527" endtime="20201223 16:04:45.300"></status>
+</kw>
+<test id="s1-s1-t1" name="tc1">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>hello jai</arg>
+</arguments>
+<msg timestamp="20201223 16:04:45.306" level="INFO">hello jai</msg>
+<status status="PASS" starttime="20201223 16:04:45.304" endtime="20201223 16:04:45.306"></status>
+</kw>
+<status status="PASS" starttime="20201223 16:04:45.301" endtime="20201223 16:04:45.307" critical="yes"></status>
+</test>
+<test id="s1-s1-t2" name="tc2">
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<status status="PASS" starttime="20201223 16:04:45.314" endtime="20201223 16:04:45.321"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=q</arg>
+<arg>robotframework</arg>
+</arguments>
+<msg timestamp="20201223 16:04:45.323" level="INFO">Typing text 'robotframework' into text field 'name=q'.</msg>
+<status status="PASS" starttime="20201223 16:04:45.321" endtime="20201223 16:04:45.735"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>name=q</arg>
+<arg>ENTER</arg>
+</arguments>
+<msg timestamp="20201223 16:04:45.737" level="INFO">Sending key(s) ('ENTER',) to name=q element.</msg>
+<msg timestamp="20201223 16:04:45.745" level="INFO">Pressing special key ENTER to element.</msg>
+<status status="PASS" starttime="20201223 16:04:45.736" endtime="20201223 16:04:46.963"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20201223 16:04:51.968" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20201223 16:04:46.964" endtime="20201223 16:04:51.968"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>test completed</arg>
+</arguments>
+<msg timestamp="20201223 16:04:51.969" level="INFO">test completed</msg>
+<status status="PASS" starttime="20201223 16:04:51.968" endtime="20201223 16:04:51.969"></status>
+</kw>
+<status status="PASS" starttime="20201223 16:04:45.310" endtime="20201223 16:04:51.970" critical="yes"></status>
+</test>
+<test id="s1-s1-t3" name="tc3">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20201223 16:04:51.971" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
+<status status="PASS" starttime="20201223 16:04:51.971" endtime="20201223 16:04:58.905"></status>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<status status="PASS" starttime="20201223 16:04:58.906" endtime="20201223 16:04:58.908"></status>
+</kw>
+<kw name="Loginkw">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=txtUsername</arg>
+<arg>${Logindata}[0]</arg>
+</arguments>
+<msg timestamp="20201223 16:04:58.910" level="INFO">Typing text 'Admin' into text field 'id=txtUsername'.</msg>
+<status status="PASS" starttime="20201223 16:04:58.909" endtime="20201223 16:04:59.027"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=txtPassword</arg>
+<arg>${logininfo}[password]</arg>
+</arguments>
+<msg timestamp="20201223 16:04:59.028" level="INFO">Typing text 'admin123' into text field 'id=txtPassword'.</msg>
+<status status="PASS" starttime="20201223 16:04:59.027" endtime="20201223 16:04:59.120"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=btnLogin</arg>
+</arguments>
+<msg timestamp="20201223 16:04:59.121" level="INFO">Clicking element 'id=btnLogin'.</msg>
+<status status="PASS" starttime="20201223 16:04:59.121" endtime="20201223 16:05:03.181"></status>
+</kw>
+<status status="PASS" starttime="20201223 16:04:58.908" endtime="20201223 16:05:03.183"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=welcome</arg>
+</arguments>
+<msg timestamp="20201223 16:05:03.188" level="INFO">Clicking element 'id=welcome'.</msg>
+<status status="PASS" starttime="20201223 16:05:03.185" endtime="20201223 16:05:03.277"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>link=Logout</arg>
+</arguments>
+<msg timestamp="20201223 16:05:03.279" level="INFO">Clicking element 'link=Logout'.</msg>
+<status status="PASS" starttime="20201223 16:05:03.278" endtime="20201223 16:05:04.559"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Testcompleted</arg>
+</arguments>
+<msg timestamp="20201223 16:05:04.561" level="INFO">Testcompleted</msg>
+<status status="PASS" starttime="20201223 16:05:04.560" endtime="20201223 16:05:04.562"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>This was executed by %{username} on %{os}</arg>
+</arguments>
+<msg timestamp="20201223 16:05:04.566" level="INFO">This was executed by jaipa on Windows_NT</msg>
+<status status="PASS" starttime="20201223 16:05:04.564" endtime="20201223 16:05:04.566"></status>
+</kw>
+<doc>This is login demo</doc>
+<status status="PASS" starttime="20201223 16:04:51.970" endtime="20201223 16:05:04.568" critical="yes"></status>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20201223 16:05:04.570" endtime="20201223 16:05:06.759"></status>
+</kw>
+<status status="PASS" starttime="20201223 16:04:40.332" endtime="20201223 16:05:06.760"></status>
+</suite>
+<status status="PASS" starttime="20201223 16:04:40.295" endtime="20201223 16:05:06.771"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0">Critical Tests</stat>
+<stat pass="3" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" id="s1" name="MyDemo">MyDemo</stat>
+<stat pass="3" fail="0" id="s1-s1" name="My First">MyDemo.My First</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
